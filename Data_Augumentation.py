@@ -1,7 +1,7 @@
 import torch
 import torchvision
 import torchvision.transforms as transform
-
+from transformers import models
 
 
 data_transform = {
@@ -24,3 +24,5 @@ data_transform = {
         transform.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 }
+
+model = models.resnet18
